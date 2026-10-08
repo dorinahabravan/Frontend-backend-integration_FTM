@@ -58,9 +58,13 @@ public interface ApplicationService {
 
     Case setCaseStatus(int caseID, String status);
 
+    Case setCaseDecision(int caseID, String decision, String decisionNote);
+
     List<Case> getAllCases();
 
     Map<String,List<Transaction>> getTransactionForWeek();
 
     List<Transaction> getTransactionForDay();
+
+
 }

@@ -17,19 +17,47 @@ public class TransactionMapper implements RowMapper<Transaction> {
         temp.setCurrencyCode(rs.getString("iso_currency_code"));
 
 
-        if (temp.getCurrencyCode().equals("USD")){
+
+        String currency = temp.getCurrencyCode();
+
+        if ("USD".equals(currency)) {
             temp.setCity("New York");
             temp.setCountry("USA");
-            System.out.println(temp.getCity());
-        }
-        else if (temp.getCurrencyCode().equals("GBP")){
+
+        } else if ("GBP".equals(currency)) {
             temp.setCity("London");
-            temp.setCountry("England");
+            temp.setCountry("United Kingdom");
+
+        } else if ("EUR".equals(currency)) {
+            String[] cities = {"Madrid", "Paris", "Berlin", "Rome", "Amsterdam"};
+            String[] countries = {"Spain", "France", "Germany", "Italy", "Netherlands"};
+
+            int index = Math.floorMod(temp.getId().hashCode(), cities.length);
+
+            temp.setCity(cities[index]);
+            temp.setCountry(countries[index]);
+
+        } else if ("JPY".equals(currency)) {
+            temp.setCity("Tokyo");
+            temp.setCountry("Japan");
+
+        } else if ("CAD".equals(currency)) {
+            temp.setCity("Toronto");
+            temp.setCountry("Canada");
+
+        } else if ("CHF".equals(currency)) {
+            temp.setCity("Zurich");
+            temp.setCountry("Switzerland");
+
+        } else if ("AUD".equals(currency)) {
+            temp.setCity("Sydney");
+            temp.setCountry("Australia");
+
+        } else {
+            temp.setCity(null);
+            temp.setCountry(null);
         }
-        else if (temp.getCurrencyCode().equals("EUR")){
-            temp.setCity("Madrid");
-            temp.setCountry("Spain");
-        }
+
 
         temp.setDescription(rs.getString("description"));
         temp.setPrimaryCategory(rs.getString("primary_category"));

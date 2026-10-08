@@ -187,6 +187,12 @@ public class ApplicationServiceImpl implements ApplicationService {
         return caseService.setCaseStatus(caseID,status);
     }
 
+
+    @Override
+    public Case setCaseDecision(int caseID, String decision, String decisionNote) {
+        return caseService.setCaseDecision(caseID, decision, decisionNote);
+    }
+
     @Override
     public List<Case> getAllCases() {
         return caseService.getCases();
@@ -355,6 +361,7 @@ public class ApplicationServiceImpl implements ApplicationService {
     // Returns EVERY transaction for an account, oldest first, each with its flag colour:
     // GREEN = no rules fired, AMBER = one rule fired, RED = two or more rules fired.
     // This is the list to show when the user searches an account ID.
+    @Override
     public List<Transaction> colourTransactionsForAccount(String accountID) {
 
         Account account = accountService.getAccount(accountID);
@@ -420,9 +427,14 @@ public class ApplicationServiceImpl implements ApplicationService {
 
             addReason(reasons, HIGH_RISK_MERCHANT_CODE,
                     highRiskMerchantCode(tx));
+            // Keeps the triggered fraud rule explanations available for the frontend
+            tx.setRiskReasons(reasons);
+
+// The number of rules that fired decides the colour: 0 GREEN, 1 AMBER, 2+ RED
+            tx.setFlagColour(FlagColour.fromRuleCount(reasons.size()));
 
             // The number of rules that fired decides the colour: 0 GREEN, 1 AMBER, 2+ RED
-            tx.setFlagColour(FlagColour.fromRuleCount(reasons.size()));
+//            tx.setFlagColour(FlagColour.fromRuleCount(reasons.size()));
         }
 
         return sorted;

@@ -19,6 +19,10 @@ public class Case {
     private String accountId;
     private String description;
 
+    // Stores the investigator's final decision and supporting note.
+    private String decision;
+    private String decisionNote;
+
 
     List<Transaction> transactions = new ArrayList<>();
 
@@ -98,6 +102,22 @@ public class Case {
             list.add(t.getId());
         }
         return list;
+    }
+
+    public String getDecision() {
+        return decision;
+    }
+
+    public void setDecision(String decision) {
+        this.decision = decision;
+    }
+
+    public String getDecisionNote() {
+        return decisionNote;
+    }
+
+    public void setDecisionNote(String decisionNote) {
+        this.decisionNote = decisionNote;
     }
 
 

@@ -33,8 +33,10 @@ public class CaseDaoImpl implements CaseDao {
     @Override
     public Case createCase(Case fraudCase) {
 
-        final String sql = "INSERT INTO cases(account_id, status, score, description, open_date, close_date) "
-                + "VALUES (?, ?, ?, ?, ?, ?)";
+        final String sql =
+                "INSERT INTO cases(account_id, status, score, description, decision, decision_note, open_date, close_date) " +
+                        "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+
         GeneratedKeyHolder keyHolder = new GeneratedKeyHolder();
 
 
@@ -45,8 +47,10 @@ public class CaseDaoImpl implements CaseDao {
             statement.setString(2, fraudCase.getStatus());
             statement.setInt(3, fraudCase.getScore());
             statement.setString(4, fraudCase.getDescription());
-            statement.setString(5, formatDate(fraudCase.getOpenedAt()));
-            statement.setString(6, formatDate(fraudCase.getClosedAt()));   // null while the case is open
+            statement.setString(5, fraudCase.getDecision());
+            statement.setString(6, fraudCase.getDecisionNote());
+            statement.setString(7, formatDate(fraudCase.getOpenedAt()));
+            statement.setString(8, formatDate(fraudCase.getClosedAt()));
             return statement;
         }, keyHolder);
 
@@ -110,11 +114,15 @@ public class CaseDaoImpl implements CaseDao {
     // Saves changes to the case itself; the transactions in the case do not change
     @Override
     public void updateCase(Case updatedCase) {
-        jdbc.update("UPDATE cases SET description = ?, status = ?, close_date = ? WHERE id = ?",
+        jdbc.update(
+                "UPDATE cases SET description = ?, status = ?, decision = ?, decision_note = ?, close_date = ? WHERE id = ?",
                 updatedCase.getDescription(),
                 updatedCase.getStatus(),
+                updatedCase.getDecision(),
+                updatedCase.getDecisionNote(),
                 formatDate(updatedCase.getClosedAt()),
-                updatedCase.getCaseId());
+                updatedCase.getCaseId()
+        );
     }
 
     // Call deleteTransactionsFromCase first, so no links are left pointing at a deleted case

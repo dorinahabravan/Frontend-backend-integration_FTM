@@ -111,7 +111,7 @@ public class CaseServiceImpl implements CaseService {
 
 
         // do not update if case is closed
-        CaseStatus currentStatus = CaseStatus.getStatusFromString(status);
+        CaseStatus currentStatus = CaseStatus.getStatusFromString(aCase.getStatus());
 
 
 
@@ -149,4 +149,21 @@ public class CaseServiceImpl implements CaseService {
         }
     }
 
+
+  @Override
+    public Case setCaseDecision(int caseID, String decision, String decisionNote) {
+
+        Case aCase = caseDao.findCaseById(caseID);
+
+        if (aCase == null) {
+            return null;
+        }
+
+        aCase.setDecision(decision);
+        aCase.setDecisionNote(decisionNote);
+
+        caseDao.updateCase(aCase);
+
+        return caseDao.findCaseById(caseID);
+    }
 }

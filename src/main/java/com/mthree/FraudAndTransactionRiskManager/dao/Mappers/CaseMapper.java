@@ -16,6 +16,10 @@ public class CaseMapper implements RowMapper<Case> {
         temp.setStatus(rs.getString("status"));
         temp.setScore(rs.getInt("score"));
         temp.setDescription(rs.getString("description"));
+        // Loads the investigator's saved decision and supporting note.
+        temp.setDecision(rs.getString("decision"));
+        temp.setDecisionNote(rs.getString("decision_note"));
+
         temp.setOpenedAt(rs.getString(("open_date")));
         temp.setClosedAt(rs.getString("close_date"));
 

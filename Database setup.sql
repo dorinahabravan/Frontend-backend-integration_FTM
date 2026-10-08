@@ -1,66 +1,74 @@
-DROP DATABASE IF EXISTS FraudDB;
-CREATE DATABASE FraudDB;
+DROP
+DATABASE IF EXISTS FraudDB;
 
-USE FraudDB;
 
-CREATE TABLE Accounts(
-	id varchar(40) PRIMARY KEY,
-    account_name varchar(50),
-    available DECIMAL(19, 2) NULL,
-    current DECIMAL(19, 2) NULL,
-    iso_currency_code varchar(5),
-    mask varchar(4),
-    account_type varchar(50),
-    account_subtype varchar(50));
+CREATE
+DATABASE FraudDB;
 
-CREATE TABLE Transactions(
-	id varchar(40) PRIMARY KEY,
-    account_id varchar(50),
-    amount DECIMAL(19, 2),
-    iso_currency_code varchar(5),
-    description varchar(50),
-    primary_category varchar(50),
-    detailed_category varchar(50),
-    payment_channel varchar(50),
-    date_transaction DATE,
-    date_authorised DATE,
-    city varchar(50),
-    country varchar(50),
-    pending BOOLEAN,
-    merchant_name varchar(100),
-    merchant_entity_id varchar(50),
-    merchant_category_code varchar(4),
 
-Constraint FK_account
-	FOREIGN KEY (account_id)
-	REFERENCES Accounts(id)
-);
+USE
+FraudDB;
 
-CREATE TABLE Cases(
-	id INT AUTO_INCREMENT PRIMARY KEY,
-    account_id varChar(40),
-    status varchar(30),
-    score INT,
-    description VARCHAR(100),
-    open_date DATETIME,
-    close_date DATETIME NULL,
 
-Constraint FK_account1
-	FOREIGN KEY (account_id)
-	REFERENCES Accounts(id)
+-- ACCOUNTS
+CREATE TABLE Accounts
+(
+    id                VARCHAR(40) PRIMARY KEY,
+    account_name      VARCHAR(50),
+    available         DECIMAL(19, 2) NULL,
+    CURRENT           DECIMAL(19, 2) NULL,
+    iso_currency_code VARCHAR(5),
+    mask              VARCHAR(4),
+    account_type      VARCHAR(50),
+    account_subtype   VARCHAR(50)
 );
 
 
+-- TRANSACTIONS
+CREATE TABLE Transactions
+(
+    id                     VARCHAR(40) PRIMARY KEY,
+    account_id             VARCHAR(50),
+    amount                 DECIMAL(19, 2),
+    iso_currency_code      VARCHAR(5),
+    description            VARCHAR(50),
+    primary_category       VARCHAR(50),
+    detailed_category      VARCHAR(50),
+    payment_channel        VARCHAR(50),
+    date_transaction       DATE,
+    date_authorised        DATE,
+    city                   VARCHAR(50),
+    country                VARCHAR(50),
+    pending                BOOLEAN,
+    merchant_name          VARCHAR(100),
+    merchant_entity_id     VARCHAR(50),
+    merchant_category_code VARCHAR(4),
+    CONSTRAINT FK_account FOREIGN KEY (account_id) REFERENCES Accounts (id)
+);
 
-CREATE TABLE case_transaction(
-	case_id INT,
-    transaction_id varchar(40),
 
-	Constraint FK_case
-	FOREIGN KEY (case_id)
-	REFERENCES Cases(id),
+-- CASES
+CREATE TABLE Cases
+(
+    id            INT AUTO_INCREMENT PRIMARY KEY,
+    account_id    VARCHAR(40),
+    status        VARCHAR(30),
+    score         INT,
+    description   TEXT,
+    open_date     DATETIME,
+    close_date    DATETIME NULL,
+    -- New columns
+    decision      VARCHAR(50),
+    decision_note TEXT,
+    CONSTRAINT FK_account1 FOREIGN KEY (account_id) REFERENCES Accounts (id)
+);
 
-	constraint FK_transaction
-		FOREIGN KEY (transaction_id)
-		REFERENCES Transactions(id)
+
+-- CASE TRANSACTIONS
+CREATE TABLE case_transaction
+(
+    case_id        INT,
+    transaction_id VARCHAR(40),
+    CONSTRAINT FK_case FOREIGN KEY (case_id) REFERENCES Cases (id),
+    CONSTRAINT FK_transaction FOREIGN KEY (transaction_id) REFERENCES Transactions (id)
 );

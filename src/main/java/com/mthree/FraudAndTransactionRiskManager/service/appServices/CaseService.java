@@ -30,4 +30,7 @@ public interface CaseService {
     Case setCaseDescription(int caseID, String description);
 
     Case setCaseStatus(int caseID, String status);
+
+    // Saves the investigator's decision and supporting note for a case
+    Case setCaseDecision(int caseID, String decision, String decisionNote);
 }

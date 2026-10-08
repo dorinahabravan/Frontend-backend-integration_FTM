@@ -34,10 +34,20 @@ public class TransactionDaoJDBC implements TransactionDao{
         throw new UnsupportedOperationException();
     }
 
+
     @Override
     public Transaction findTransactionById(String transactionId) {
-        return jdbc.query("SELECT * FROM Transactions WHERE id = '" + transactionId + "';", new TransactionMapper()).get(0);
+        String sql = "SELECT * FROM Transactions WHERE id = ?";
+
+        List<Transaction> transactions = jdbc.query(
+                sql,
+                new TransactionMapper(),
+                transactionId
+        );
+
+        return transactions.isEmpty() ? null : transactions.get(0);
     }
+
 
     @Override
     public List<Transaction> findTransactionsByAccountId(String accountId) {

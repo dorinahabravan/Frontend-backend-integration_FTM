@@ -5,6 +5,8 @@ import org.json.simple.JSONObject;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 
 
 //unfinished
@@ -28,6 +30,9 @@ public class Transaction {
     private String country;
     private Boolean pending;
     private FlagColour flagColour = FlagColour.GREEN;
+
+
+    private List<String> riskReasons = new ArrayList<>();
 
     public String getId() {
         return id;
@@ -165,6 +170,14 @@ public class Transaction {
 
     public void setFlagColour(FlagColour flagColour) {
         this.flagColour = flagColour;
+    }
+
+    public List<String> getRiskReasons() {
+        return riskReasons;
+    }
+
+    public void setRiskReasons(List<String> riskReasons) {
+        this.riskReasons = riskReasons;
     }
 
     @Override

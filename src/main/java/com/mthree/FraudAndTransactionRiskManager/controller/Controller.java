@@ -12,6 +12,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/FTRM")
+@CrossOrigin(origins = "http://localhost:5175")
 //unfinished
 public class Controller {
 
@@ -107,6 +108,20 @@ public class Controller {
     }
 
 
+    // Added to expose fraud detection results to the frontend.
+    // Returns all account transactions with their calculated GREEN, AMBER or RED flag colour.
+    @GetMapping("/accounts/{accountID}/transactions/coloured")
+    public List<Transaction> getColouredAccountTransactions(
+            @PathVariable String accountID) {
+
+        auditService.writeToAudit(
+                "getColouredAccountTransactions:" + accountID
+        );
+
+        return applicationService.colourTransactionsForAccount(accountID);
+    }
+
+
 
     /*
     // retrieve all risk rules
@@ -164,6 +179,46 @@ public class Controller {
         return applicationService.setCaseStatus(caseID,status);
     }
 
+    // Saves the investigator's final decision and supporting note
+    @PutMapping("/cases/{caseID}/decision")
+    public Case setCaseDecision(
+            @PathVariable int caseID,
+            @RequestBody Case decisionUpdate) {
+
+        auditService.writeToAudit(
+                "setCaseDecision:" + caseID + ":" + decisionUpdate.getDecision()
+        );
+
+        return applicationService.setCaseDecision(
+                caseID,
+                decisionUpdate.getDecision(),
+                decisionUpdate.getDecisionNote()
+        );
+    }
+
+
+    // Updates an existing fraud case
+    @PutMapping("/cases/{caseID}")
+    public Case updateCase(
+            @PathVariable int caseID,
+            @RequestBody Case updatedCase) {
+
+        updatedCase.setCaseId(caseID);
+
+        auditService.writeToAudit("updateCase:" + caseID);
+
+        return applicationService.updateCase(caseID, updatedCase);
+    }
+
+    // Deletes a fraud case
+    @DeleteMapping("/cases/{caseID}")
+    public void deleteCase(@PathVariable int caseID) {
+
+        auditService.writeToAudit("deleteCase:" + caseID);
+
+        applicationService.deleteCase(caseID);
+    }
+
     // add transaction to case
     @PutMapping("/cases/{caseID}/add-transaction/{transactionID}")
     public Case addTransactionToCase(@PathVariable int caseID,@PathVariable String transactionID) {
@@ -185,6 +240,8 @@ public class Controller {
         auditService.writeToAudit("getCaseForAccount:" + accountID);
         return applicationService.getCasesForAccount(accountID);
     }
+
+
 
 
 
