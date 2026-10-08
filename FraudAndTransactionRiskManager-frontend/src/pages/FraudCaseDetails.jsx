@@ -325,10 +325,7 @@ function FraudCaseDetails() {
                         </strong>
                     </div>
 
-                    <div className="case-detail-row">
-                        <span>Score</span>
-                        <strong>{fraudCase.score ?? 0}</strong>
-                    </div>
+
 
                     <div className="case-detail-row">
                         <span>Opened</span>
