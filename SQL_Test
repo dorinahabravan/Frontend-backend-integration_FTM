@@ -1,0 +1,25 @@
+USE FraudDB;
+
+DELETE FROM case_transaction WHERE transaction_id LIKE 'DEMO-TX-%';
+DELETE FROM Cases WHERE account_id = 'DEMO-ACC-001';
+DELETE FROM Transactions WHERE account_id = 'DEMO-ACC-001';
+DELETE FROM Accounts WHERE id = 'DEMO-ACC-001';
+
+INSERT INTO Accounts (id, account_name, available, current, iso_currency_code, mask, account_type, account_subtype)
+VALUES ('DEMO-ACC-001', 'Demo Checking', 10.00, 10.00, 'USD', '0001', 'depository', 'checking');
+
+INSERT INTO Transactions (id, account_id, amount, iso_currency_code, description, primary_category,
+                          detailed_category, payment_channel, date_transaction, date_authorised,
+                          city, country, pending, merchant_name, merchant_entity_id, merchant_category_code)
+VALUES
+    ('DEMO-TX-001', 'DEMO-ACC-001', 89.40, 'USD', 'SparkFun', 'GENERAL_MERCHANDISE', NULL, 'online', '2026-09-07', '2026-09-07', NULL, NULL, FALSE, 'SparkFun', NULL, '5732'),
+    ('DEMO-TX-002', 'DEMO-ACC-001', 12.00, 'USD', 'McDonald''s', 'FOOD_AND_DRINK', NULL, 'in store', '2026-09-08', '2026-09-08', NULL, NULL, FALSE, 'McDonald''s', 'DEMO-MCD', '5814'),
+    ('DEMO-TX-003', 'DEMO-ACC-001', 4.33, 'USD', 'Starbucks', 'FOOD_AND_DRINK', NULL, 'in store', '2026-09-08', '2026-09-08', NULL, NULL, FALSE, 'Starbucks', 'DEMO-SBUX', '5814'),
+    ('DEMO-TX-004', 'DEMO-ACC-001', 4.33, 'USD', 'Starbucks', 'FOOD_AND_DRINK', NULL, 'in store', '2026-10-01', '2026-10-01', NULL, NULL, FALSE, 'Starbucks', 'DEMO-SBUX', '5814'),
+    ('DEMO-TX-005', 'DEMO-ACC-001', 12.00, 'USD', 'McDonald''s', 'FOOD_AND_DRINK', NULL, 'in store', '2026-10-02', '2026-10-02', NULL, NULL, FALSE, 'McDonald''s', 'DEMO-MCD', '5814'),
+    ('DEMO-TX-006', 'DEMO-ACC-001', 300.00, 'USD', 'SparkFun', 'GENERAL_MERCHANDISE', NULL, 'online', '2026-10-03', '2026-10-03', NULL, NULL, FALSE, 'SparkFun', NULL, '5732'),
+    ('DEMO-TX-007', 'DEMO-ACC-001', 10.00, 'GBP', 'Starbucks London', 'FOOD_AND_DRINK', NULL, 'in store', '2026-10-04', '2026-10-04', NULL, NULL, FALSE, 'Starbucks', 'DEMO-SBUX', '5814'),
+    ('DEMO-TX-008', 'DEMO-ACC-001', 5.00, 'USD', 'LUCKY SPINS ONLINE', 'ENTERTAINMENT', NULL, 'online', '2026-10-05', '2026-10-05', NULL, NULL, FALSE, 'Lucky Spins', NULL, '7995'),
+    ('DEMO-TX-009', 'DEMO-ACC-001', 20.00, 'GBP', 'CRYPTO EXCHANGE', 'TRANSFER_OUT', NULL, 'online', '2026-10-06', '2026-10-06', NULL, NULL, FALSE, 'Crypto Exchange', NULL, '6051'),
+    ('DEMO-TX-010', 'DEMO-ACC-001', 950.00, 'USD', 'ONLINE TRANSFER TO 4471', 'TRANSFER_OUT', NULL, 'online', '2026-10-08', '2026-10-08', NULL, NULL, FALSE, NULL, NULL, NULL);
+
