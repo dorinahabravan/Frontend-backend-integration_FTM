@@ -301,7 +301,7 @@ function FraudCases() {
                             <th>CASE ID</th>
                             <th>ACCOUNT</th>
                             <th>STATUS</th>
-                            <th>SCORE</th>
+
                             <th>OPENED</th>
                             <th>CLOSED</th>
                             <th>DECISION</th>
@@ -367,11 +367,7 @@ function FraudCases() {
                                         )}
                                     </td>
 
-                                    <td>
-                                        <strong>
-                                            {fraudCase.score ?? 0}
-                                        </strong>
-                                    </td>
+
 
                                     <td>
                                         {formatDate(
