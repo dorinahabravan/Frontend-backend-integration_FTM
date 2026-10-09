@@ -1,0 +1,420 @@
+<mxfile host="app.diagrams.net" pages="2">
+  <diagram id="fraud-platform" name="Fraud Detection Platform">
+    <mxGraphModel dx="7885" dy="5200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E5E7EB;strokeColor=#475569;fontStyle=1;fontSize=48;align=center;" value="Fraud Detection Platform" vertex="1">
+          <mxGeometry height="303.75" width="810" x="-3210" y="3613.9500000000003" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#3B82F6;fontStyle=1;fontSize=48;align=center;" value="User Authentication &amp;amp; Access Management" vertex="1">
+          <mxGeometry height="243" width="931.5" x="-640" y="-450" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#22C55E;fontStyle=1;fontSize=48;align=center;" value="Functional Requirements" vertex="1">
+          <mxGeometry height="178.2" width="769.5" x="1480" y="-440.25000000000006" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=48;align=left;spacingLeft=8;" value="FR1: The system shall allow authorised users to log in to the platform." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="-420.00000000000006" as="geometry" />
+        </mxCell>
+        <mxCell id="11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=48;align=left;spacingLeft=8;" value="FR3: The system shall restrict access to authenticated and authorised users only." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="-79.99999999999994" as="geometry" />
+        </mxCell>
+        <mxCell id="13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE4E6;strokeColor=#FB7185;fontStyle=1;fontSize=48;align=center;" value="User Stories" vertex="1">
+          <mxGeometry height="178.2" width="810" x="1480" y="514" as="geometry" />
+        </mxCell>
+        <mxCell id="15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#FB7185;fontSize=48;align=left;spacingLeft=8;" value="US1: As a fraud analyst, I want to securely log in, so that I can access the platform." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="427.29999999999995" as="geometry" />
+        </mxCell>
+        <mxCell id="17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#FB7185;fontSize=48;align=left;spacingLeft=8;" value="US2: As a fraud analyst, I want to log out, so that my account remains secure." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="565.0000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="21" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#3B82F6;fontStyle=1;fontSize=48;align=center;" value="Bank Account Management" vertex="1">
+          <mxGeometry height="243" width="931.5" x="-680" y="1424" as="geometry" />
+        </mxCell>
+        <mxCell id="23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#22C55E;fontStyle=1;fontSize=48;align=center;" value="Functional Requirements" vertex="1">
+          <mxGeometry height="178.2" width="769.5" x="1450" y="1456.3999999999999" as="geometry" />
+        </mxCell>
+        <mxCell id="25" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=48;align=left;spacingLeft=8;" value="FR4: The system shall display a list of bank accounts with relevant risk information." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="1423.8" as="geometry" />
+        </mxCell>
+        <mxCell id="27" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=48;align=left;spacingLeft=8;" value="FR5: The system shall allow users to view bank account details" vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="1556.1" as="geometry" />
+        </mxCell>
+        <mxCell id="29" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=48;align=left;spacingLeft=8;" value="FR6: The system shall display transactions associated with a bank account." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="1688.4" as="geometry" />
+        </mxCell>
+        <mxCell id="31" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=48;align=left;spacingLeft=8;" value="&lt;span style=&quot;caret-color: rgb(0, 0, 0); text-decoration-thickness: auto; text-decoration-style: solid;&quot;&gt;FR7:&lt;/span&gt;&lt;span style=&quot;caret-color: rgb(0, 0, 0); text-decoration-thickness: auto; text-decoration-style: solid;&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt; &lt;/span&gt;The system shall retrieve/store bank account information from Plaid.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="1820.7" as="geometry" />
+        </mxCell>
+        <mxCell id="33" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=48;align=left;spacingLeft=8;" value="&lt;span style=&quot;caret-color: rgb(0, 0, 0); text-decoration-thickness: auto; text-decoration-style: solid;&quot;&gt;FR8:&lt;/span&gt;&lt;span style=&quot;caret-color: rgb(0, 0, 0); text-decoration-thickness: auto; text-decoration-style: solid;&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt; &lt;/span&gt;The system shall allow users to search/select a bank account.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="1953" as="geometry" />
+        </mxCell>
+        <mxCell id="35" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=48;align=left;spacingLeft=8;" value="&lt;span style=&quot;caret-color: rgb(0, 0, 0); text-decoration-thickness: auto; text-decoration-style: solid;&quot;&gt;FR9:&lt;/span&gt;&lt;span style=&quot;caret-color: rgb(0, 0, 0); text-decoration-thickness: auto; text-decoration-style: solid;&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt; &lt;/span&gt;The system shall display relevant account information such as account name, mask, type and subtype.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="2085.3" as="geometry" />
+        </mxCell>
+        <mxCell id="39" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE4E6;strokeColor=#FB7185;fontStyle=1;fontSize=48;align=center;" value="User Stories" vertex="1">
+          <mxGeometry height="178.2" width="769.5" x="1450" y="2646.4500000000003" as="geometry" />
+        </mxCell>
+        <mxCell id="41" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#FB7185;fontSize=48;align=left;spacingLeft=8;" value="US3: As a fraud analyst, I want to view bank accounts with risk indicators, so that I can prioritise reviews." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="2554.65" as="geometry" />
+        </mxCell>
+        <mxCell id="43" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#FB7185;fontSize=48;align=left;spacingLeft=8;" value="US4: As a fraud analyst, I want to view bank account details and transaction history, so that I can assess risk." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="2686.95" as="geometry" />
+        </mxCell>
+        <mxCell id="47" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#3B82F6;fontStyle=1;fontSize=48;align=center;" value="Transaction Management" vertex="1">
+          <mxGeometry height="243" width="931.5" x="-650" y="3298.05" as="geometry" />
+        </mxCell>
+        <mxCell id="49" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#22C55E;fontStyle=1;fontSize=48;align=center;" value="Functional Requirements" vertex="1">
+          <mxGeometry height="178.2" width="769.5" x="1200" y="3270" as="geometry" />
+        </mxCell>
+        <mxCell id="51" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=48;align=left;spacingLeft=8;" value="FR11: The system shall retrieve and synchronise transaction data through Plaid." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="3250.8" as="geometry" />
+        </mxCell>
+        <mxCell id="53" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=48;align=left;spacingLeft=8;" value="FR12: The system shall update transactions at regular intervals." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="3383.1" as="geometry" />
+        </mxCell>
+        <mxCell id="55" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=48;align=left;spacingLeft=8;" value="FR13: The system shall store current and historical transactions." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="3515.4" as="geometry" />
+        </mxCell>
+        <mxCell id="57" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=48;align=left;spacingLeft=8;" value="FR14: The system shall evaluate each transaction against enabled risk rules." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="3647.7" as="geometry" />
+        </mxCell>
+        <mxCell id="59" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=48;align=left;spacingLeft=8;" value="FR15: The system shall create and store risk flags for transactions that trigger risk rules.." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="3780" as="geometry" />
+        </mxCell>
+        <mxCell id="61" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=48;align=left;spacingLeft=8;" value="FR16: The system shall allow users to view individual transaction details." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="3912.3" as="geometry" />
+        </mxCell>
+        <mxCell id="63" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=48;align=left;spacingLeft=8;" value="FR17: The system shall display relevant risk flags and risk information for each transaction." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="4044.6" as="geometry" />
+        </mxCell>
+        <mxCell id="65" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE4E6;strokeColor=#FB7185;fontStyle=1;fontSize=48;align=center;" value="User Stories" vertex="1">
+          <mxGeometry height="178.2" width="769.5" x="1480" y="4430" as="geometry" />
+        </mxCell>
+        <mxCell id="67" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#FB7185;fontSize=48;align=left;spacingLeft=8;" value="US5: As a fraud analyst, I want transaction data to be imported, so that it is always up to date." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="4381.65" as="geometry" />
+        </mxCell>
+        <mxCell id="69" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#FB7185;fontSize=48;align=left;spacingLeft=8;" value="US6: As a fraud analyst, I want to view transaction details and risk indicators, so that I can assess risk." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="4513.95" as="geometry" />
+        </mxCell>
+        <mxCell id="71" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#FB7185;fontSize=48;align=left;spacingLeft=8;" value="US7: As a fraud analyst, I want to review historical transactions, so that I can investigate suspicious activity." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="4646.25" as="geometry" />
+        </mxCell>
+        <mxCell id="73" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#3B82F6;fontStyle=1;fontSize=48;align=center;" value="Investigation Management" vertex="1">
+          <mxGeometry height="243" width="931.5" x="-630" y="4990" as="geometry" />
+        </mxCell>
+        <mxCell id="75" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#22C55E;fontStyle=1;fontSize=48;align=center;" value="Functional Requirements" vertex="1">
+          <mxGeometry height="178.2" width="769.5" x="1520" y="5010" as="geometry" />
+        </mxCell>
+        <mxCell id="77" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=48;align=left;spacingLeft=8;" value="FR18: The system shall allow users to start an investigation for a suspicious bank account or transaction." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2710" y="4960" as="geometry" />
+        </mxCell>
+        <mxCell id="79" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=48;align=left;spacingLeft=8;" value="FR19: The system shall allow users to update investigation status and priority." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2710" y="5149" as="geometry" />
+        </mxCell>
+        <mxCell id="81" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=48;align=left;spacingLeft=8;" value="FR20: The system shall allow users to add notes to an investigation." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2700" y="5330" as="geometry" />
+        </mxCell>
+        <mxCell id="83" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=48;align=left;spacingLeft=8;" value="FR21: The system shall allow users to record an investigation decision." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2710" y="5532.3" as="geometry" />
+        </mxCell>
+        <mxCell id="85" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=48;align=left;spacingLeft=8;" value="FR22: The system shall allow users to submit the final investigation decision." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2730" y="5703" as="geometry" />
+        </mxCell>
+        <mxCell id="87" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=48;align=left;spacingLeft=8;" value="FR23: The system shall allow users to reopen an investigation when further review is required." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2730" y="5860" as="geometry" />
+        </mxCell>
+        <mxCell id="89" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE4E6;strokeColor=#FB7185;fontStyle=1;fontSize=48;align=center;" value="User Stories" vertex="1">
+          <mxGeometry height="178.2" width="769.5" x="1450" y="6231.800000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="91" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#FB7185;fontSize=48;align=left;spacingLeft=8;" value="US8: As a fraud analyst, I want to start an investigation, so that suspicious activity can be reviewed." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2700" y="6135.000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="93" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#FB7185;fontSize=48;align=left;spacingLeft=8;" value="US9: As a fraud analyst, I want to update investigation status and priority, so that cases can be managed effectively." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2700" y="6260" as="geometry" />
+        </mxCell>
+        <mxCell id="95" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#FB7185;fontSize=48;align=left;spacingLeft=8;" value="US10: As a fraud analyst, I want to record notes and update&amp;nbsp; the investigation outcome, so that the case is properly documented." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2700" y="6410" as="geometry" />
+        </mxCell>
+        <mxCell id="97" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#3B82F6;fontStyle=1;fontSize=48;align=center;" value="Dashboard &amp;amp; Monitoring" vertex="1">
+          <mxGeometry height="243" width="931.5" x="-670" y="6772.5" as="geometry" />
+        </mxCell>
+        <mxCell id="99" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#22C55E;fontStyle=1;fontSize=48;align=center;" value="Functional Requirements" vertex="1">
+          <mxGeometry height="178.2" width="769.5" x="1200" y="6790" as="geometry" />
+        </mxCell>
+        <mxCell id="101" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=48;align=left;spacingLeft=8;" value="FR24: The system shall display an overview of high-risk accounts and transactions." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="6772.5" as="geometry" />
+        </mxCell>
+        <mxCell id="103" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=48;align=left;spacingLeft=8;" value="FR25: The system shall display real-time alerts for high-risk activity." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="6904.8" as="geometry" />
+        </mxCell>
+        <mxCell id="105" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=48;align=left;spacingLeft=8;" value="FR26: The system shall display the number and status of open investigations." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="7037.1" as="geometry" />
+        </mxCell>
+        <mxCell id="107" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=48;align=left;spacingLeft=8;" value="FR27: The system shall provide summary statistics and visualisations of fraud activity." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="7169.4" as="geometry" />
+        </mxCell>
+        <mxCell id="109" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=48;align=left;spacingLeft=8;" value="FR28: The system shall keep an audit log of key user actions and decisions." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="7301.7" as="geometry" />
+        </mxCell>
+        <mxCell id="111" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE4E6;strokeColor=#FB7185;fontStyle=1;fontSize=48;align=center;" value="User Stories" vertex="1">
+          <mxGeometry height="178.2" width="769.5" x="1400" y="7680" as="geometry" />
+        </mxCell>
+        <mxCell id="113" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#FB7185;fontSize=48;align=left;spacingLeft=8;" value="US11: As a fraud analyst, I want to see high-risk bank accounts and transactions on a dashboard, so that I can quickly take action." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="7638.75" as="geometry" />
+        </mxCell>
+        <mxCell id="115" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#FB7185;fontSize=48;align=left;spacingLeft=8;" value="US12: As a fraud analyst, I want to receive alerts for suspicious activity, so that I can respond quickly." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="7771.05" as="geometry" />
+        </mxCell>
+        <mxCell id="117" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#FB7185;fontSize=48;align=left;spacingLeft=8;" value="US13:As a fraud analyst, I want to view open investigations and their status, so that I can manage my workload." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="7903.35" as="geometry" />
+        </mxCell>
+        <mxCell id="119" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#3B82F6;fontStyle=1;fontSize=48;align=center;" value="Non-Functional Requirements" vertex="1">
+          <mxGeometry height="243" width="931.5" x="-630" y="8621.1" as="geometry" />
+        </mxCell>
+        <mxCell id="121" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#22C55E;fontStyle=1;fontSize=48;align=center;" value="Non-Functional Requirements" vertex="1">
+          <mxGeometry height="178.2" width="769.5" x="1400" y="8640" as="geometry" />
+        </mxCell>
+        <mxCell id="123" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;fontSize=48;align=left;spacingLeft=8;strokeColor=#10739e;" value="NFR1: The system shall protect data in transit and at rest." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="8334.9" as="geometry" />
+        </mxCell>
+        <mxCell id="125" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;fontSize=48;align=left;spacingLeft=8;strokeColor=#10739e;" value="NFR2: The system shall respond to user actions within&amp;nbsp; seconds." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="8467.2" as="geometry" />
+        </mxCell>
+        <mxCell id="127" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;fontSize=48;align=left;spacingLeft=8;strokeColor=#10739e;" value="NFR3: The system shall be available with at least 99.5% uptime." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="8599.5" as="geometry" />
+        </mxCell>
+        <mxCell id="129" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;fontSize=48;align=left;spacingLeft=8;strokeColor=#10739e;" value="NFR4: The system shall have an intuitive and easy-to-use interface." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="8731.8" as="geometry" />
+        </mxCell>
+        <mxCell id="131" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontSize=48;align=left;spacingLeft=8;" value="NFR5: The system shall handle an increasing volume of transactions and users." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="8864.1" as="geometry" />
+        </mxCell>
+        <mxCell id="133" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontSize=48;align=left;spacingLeft=8;" value="NFR6: The system shall ensure data accuracy and consistency." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="8996.4" as="geometry" />
+        </mxCell>
+        <mxCell id="9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=48;align=left;spacingLeft=8;" value="FR2: The system shall allow users to log out of the platform." vertex="1">
+          <mxGeometry height="137.7" width="2794.5" x="2677.5" y="-249.9999999999999" as="geometry" />
+        </mxCell>
+        <mxCell id="g1zL1V8YQwMRED3bhtZt-137" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-220" y="4490" as="sourcePoint" />
+            <mxPoint x="-170" y="4440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g1zL1V8YQwMRED3bhtZt-139" edge="1" parent="1" source="2" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-300" y="1740" as="sourcePoint" />
+            <mxPoint x="-250" y="1690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g1zL1V8YQwMRED3bhtZt-140" edge="1" parent="1" source="2" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" target="21" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-2390" y="3780" as="sourcePoint" />
+            <mxPoint x="-65" y="2580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g1zL1V8YQwMRED3bhtZt-141" edge="1" parent="1" source="2" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="47" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-2140" y="5700" as="sourcePoint" />
+            <mxPoint x="-720" y="3480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g1zL1V8YQwMRED3bhtZt-143" edge="1" parent="1" source="2" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="73" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-2400" y="6460" as="sourcePoint" />
+            <mxPoint x="-680" y="4240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--135" edge="1" parent="1" source="2" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="97" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-2290" y="3970" as="sourcePoint" />
+            <mxPoint x="-520" y="5364" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--136" edge="1" parent="1" source="2" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="119" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-2030" y="5650" as="sourcePoint" />
+            <mxPoint x="-650" y="8710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--137" edge="1" parent="1" source="3" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1040" y="-120" as="sourcePoint" />
+            <mxPoint x="2810" y="1274" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--138" edge="1" parent="1" source="3" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="13" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="740" y="-100" as="sourcePoint" />
+            <mxPoint x="2510" y="1294" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--139" edge="1" parent="1" source="21" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="39" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1000" y="1740" as="sourcePoint" />
+            <mxPoint x="2770" y="3134" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--140" edge="1" parent="1" source="21" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="23" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1000" y="1740" as="sourcePoint" />
+            <mxPoint x="2770" y="3134" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--141" edge="1" parent="1" source="47" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="49" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="810" y="3320" as="sourcePoint" />
+            <mxPoint x="2580" y="4714" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--142" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="65" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="290" y="3390" as="sourcePoint" />
+            <mxPoint x="2790" y="5034" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--143" edge="1" parent="1" source="73" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="75" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="720" y="5980" as="sourcePoint" />
+            <mxPoint x="2490" y="7374" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--144" edge="1" parent="1" source="73" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="89" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="900" y="5350" as="sourcePoint" />
+            <mxPoint x="2670" y="6744" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--145" edge="1" parent="1" source="97" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="99" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="740" y="7370" as="sourcePoint" />
+            <mxPoint x="2510" y="8764" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--146" edge="1" parent="1" source="97" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="111" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="950" y="7430" as="sourcePoint" />
+            <mxPoint x="2720" y="8824" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--147" edge="1" parent="1" source="119" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="121" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="570" y="9590" as="sourcePoint" />
+            <mxPoint x="2340" y="10984" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--148" edge="1" parent="1" source="121" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" target="129" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1229.5" y="8869.499999999998" as="sourcePoint" />
+            <mxPoint x="1920" y="10650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--149" edge="1" parent="1" source="111" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" target="115" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1780" y="8210" as="sourcePoint" />
+            <mxPoint x="3550" y="9604" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--150" edge="1" parent="1" source="99" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="101" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="2000" y="7220" as="sourcePoint" />
+            <mxPoint x="3770" y="8614" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--151" edge="1" parent="1" source="89" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="93" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="2050" y="5940" as="sourcePoint" />
+            <mxPoint x="3820" y="7334" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--152" edge="1" parent="1" source="75" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" target="77" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1810" y="5570" as="sourcePoint" />
+            <mxPoint x="3580" y="6964" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--153" edge="1" parent="1" source="65" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="67" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="2350" y="3910" as="sourcePoint" />
+            <mxPoint x="4060" y="5244" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--154" edge="1" parent="1" source="49" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="51" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="2120" y="3490" as="sourcePoint" />
+            <mxPoint x="3890" y="4884" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--155" edge="1" parent="1" source="39" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" target="41" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1950" y="2120" as="sourcePoint" />
+            <mxPoint x="3720" y="3514" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--156" edge="1" parent="1" source="23" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1720" y="1150" as="sourcePoint" />
+            <mxPoint x="2660" y="1545.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--157" edge="1" parent="1" source="13" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.026;entryY=0.254;entryDx=0;entryDy=0;entryPerimeter=0;" target="17" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="2320" y="810" as="sourcePoint" />
+            <mxPoint x="4090" y="2204" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--159" edge="1" parent="1" source="5" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1780" as="sourcePoint" />
+            <mxPoint x="3550" y="1394" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--160" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;align=left;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" value="&lt;div style=&quot;&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 64px;&quot;&gt;PROJECT SCOPE LEGEND&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;font-size: 64px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 64px;&quot;&gt;🟢 MVP - Required for current release&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 64px;&quot;&gt;🟠 STRETCH GOAL - Implement if time allows&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 64px;&quot;&gt;🟣 VERSION 2.0 - Planned future development&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="1150" width="1150" x="-3070" y="-1790" as="geometry" />
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--163" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="&lt;div&gt;&lt;font style=&quot;font-size: 54px;&quot;&gt;Stretch Goal&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="193" width="620" x="-490" y="-250" as="geometry" />
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--164" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="&lt;font style=&quot;font-size: 48px;&quot;&gt;MVP&lt;/font&gt;" vertex="1">
+          <mxGeometry height="193" width="620" x="-490" y="3520.8" as="geometry" />
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--165" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="&lt;div&gt;&lt;font style=&quot;font-size: 54px;&quot;&gt;Stretch Goal&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="157" width="620" x="2030" y="5860" as="geometry" />
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--166" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="&lt;div&gt;&lt;font style=&quot;font-size: 54px;&quot;&gt;Stretch Goal&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="142.9" width="620" x="2010" y="7307.1" as="geometry" />
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--167" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="&lt;div&gt;&lt;font style=&quot;font-size: 54px;&quot;&gt;Version 2.0&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="157" width="620" x="2014" y="6904.8" as="geometry" />
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--168" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="&lt;div&gt;&lt;font style=&quot;font-size: 54px;&quot;&gt;Stretch Goal&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="157" width="620" x="2040" y="3383.1" as="geometry" />
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--170" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="&lt;font style=&quot;font-size: 48px;&quot;&gt;MVP&lt;/font&gt;" vertex="1">
+          <mxGeometry height="193" width="620" x="-500" y="1634.6" as="geometry" />
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--171" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="&lt;font style=&quot;font-size: 48px;&quot;&gt;MVP&lt;/font&gt;" vertex="1">
+          <mxGeometry height="193" width="620" x="-440" y="5210" as="geometry" />
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--172" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="&lt;font style=&quot;font-size: 48px;&quot;&gt;MVP&lt;/font&gt;" vertex="1">
+          <mxGeometry height="193" width="620" x="-514.25" y="7000" as="geometry" />
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--173" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="&lt;font style=&quot;font-size: 48px;&quot;&gt;MVP&lt;/font&gt;" vertex="1">
+          <mxGeometry height="193" width="620" x="-474.25" y="8836.45" as="geometry" />
+        </mxCell>
+        <mxCell id="dfKqFgGEOFtDBlrgU1j--174" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="&lt;div&gt;&lt;font style=&quot;font-size: 54px;&quot;&gt;Version 2.0&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="157" width="620" x="2030" y="7751.75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="hXlGq23Lr88DnRrawhdr" name="Page-2">
+    <mxGraphModel dx="857" dy="640" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
